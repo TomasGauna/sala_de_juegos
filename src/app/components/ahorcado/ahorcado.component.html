@@ -1,0 +1,28 @@
+<div class="ahorcado-container">
+    <div class="divAhorcado">
+        <h1 class="titulo-ahorcado">AHORCADO</h1>
+        <p class="intentos">Intentos {{ attempts }}/6</p>
+    </div>
+    <div class="palabra-adivinar">
+        <div class="text-center">
+            <div *ngFor="let hyphen of hyphenatedWord" class="palabra">
+                <span style="margin: 10px; font-size: 80px;" >{{ hyphen }}</span>
+            </div>
+        </div>
+    </div>
+</div>
+<div class="parteBaja">
+    <div class="container-letras">
+        <button *ngFor="let letter of buttonLetters; let i=index" id="boton{{i}}" class="btn-letra" (click)="sendLetter(letter, i)">
+            {{ letter }}
+        </button>
+    </div>
+    <div *ngIf="!activeGame" class="divBtn">
+        <button class="btn-reiniciar" (click)="restartGame()">REINICIAR JUEGO</button>
+        <button class="btn-reiniciar" routerLink="/juegos">VOLVER</button>
+    </div>    
+</div>
+<div class="error-toast" *ngIf="toast">
+    <div class="error-toast-icon">!</div>
+    <div class="error-toast-message">{{ mensaje }}</div>
+</div>

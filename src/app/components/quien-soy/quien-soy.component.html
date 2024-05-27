@@ -1,0 +1,15 @@
+<div class="contenedor">
+    <div class="quien-soy">
+        <br>
+        <h1 style="text-shadow: 0 2px 6px rgba(0, 0, 0, 2);">¿Quién soy?</h1>
+        <br>
+        <span style="font-size: 23px;">Nombre y apellido: {{perfil.name}}</span>
+        <span style="font-size: 23px;">User: {{perfil.login}}</span>
+        <span style="font-size: 23px;">En git desde: {{perfil.created_at}}</span>
+        <br>
+        <img style="width: 10%;" [src]="perfil.avatar_url">
+        <br>
+        <h2 style="text-shadow: 0 2px 6px rgba(0, 0, 0, 2);">Juego propio: EVITANDO MINAS</h2>
+        <p style="font-size: 20px; width: 80%;">{{explicacion}}</p>
+    </div>
+</div>

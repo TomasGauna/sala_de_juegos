@@ -1,0 +1,74 @@
+<div class="container-gral">
+    <div class="contenedor">
+        <div class=" divTitulo">
+            <label class="titulo">ENCUESTA</label>
+        </div>
+          <div class="">
+            <form id="form">
+                <div style="width: 71%; margin: 0px;" class=" row">
+                    <input id="nombre" class="input col" placeholder="Ingrese su nombre" [(ngModel)]="nombre" name="n">
+                    <input id="apellido" class="input col" placeholder="Ingrese su apellido" [(ngModel)]="apellido" name="n">
+                </div>
+
+                <div style="width: 71%; margin: 0px;" class=" row">
+                    <input class="input col" id="edad" [(ngModel)]="edad" placeholder="Ingrese su edad"  name="n" type="text">
+                    <input class="input col" id="telefono" [(ngModel)]="telefono" placeholder="Ingrese su numero de telefono" id="n" name="n" type="text">
+                </div>
+
+                <div class="preguntas row">
+                    <h3 class="" style="color: #fff;">¿Cuántas veces crees que jugaste? No importa que juego</h3>
+                    <input class="input col" [(ngModel)]="vecesJugadas" type="number" name="n" label="Correo electronico">
+                    
+                    <h3  class="" style="color: #fff;">Elija sus juegos preferidos</h3>
+                    <div class="divCheck row py-1">
+                        <div class="col">
+                            <input type="checkbox" id="op1" name="opciones" value="ahorcado">
+                            <label for="op1">AHORCADO</label><br>
+                        </div>
+    
+                        <div class="col">
+                            <input type="checkbox" id="op2" name="opciones" value="mayor-menor">
+                            <label for="op2">MAYOR-MENOR</label><br>
+                        </div>
+    
+                        <div class="col">
+                            <input type="checkbox" id="op3" name="opciones" value="preguntados">
+                            <label for="op3">PREGUNTADOS</label><br>
+                        </div>
+    
+                        <div class="col">
+                            <input type="checkbox" id="op4" name="opciones" value="evitandoMinas">
+                            <label for="op4">EVITANDO MINAS</label><br>
+                        </div>
+                    </div>
+    
+                    <h3 style="color: #fff;">¿Qué puntaje le darias?</h3>
+                    <div class="divCheck row">
+                        <div class="col">
+                            <input type="radio" id="opcion1" name="preferencia" value="2-3">
+                            <label for="opcion1">2-3 (DOS O TRES)</label><br>
+                        </div>
+    
+                        <div class="col">
+                            <input type="radio" id="opcion2" name="preferencia" value="4-5">
+                            <label for="opcion2">4-5 (CUATRO O CINCO)</label><br>
+                        </div>
+    
+                        <div class="col">
+                            <input type="radio" id="opcion3" name="preferencia" value="6-10">
+                            <label for="opcion3"> 6-10 (DE SEIS A DIEZ)</label><br>
+                        </div>
+                    </div>
+                </div>
+                <div class="divBoton">
+                    <button (click)="enviar()" id="btn">ENVIAR</button>
+                </div>
+            </form>
+        </div>
+    </div>
+</div>
+
+<div class="error-toast" *ngIf="toast">
+    <div class="error-toast-icon">!</div>
+    <div class="error-toast-message">{{ mensaje }}</div>
+</div>   

@@ -1,0 +1,231 @@
+.ahorcado-container {
+  font-family: "Poppins", sans-serif;
+  background-repeat: no-repeat;
+  background-attachment: fixed;
+  background-position: center;
+  background-size: cover;
+  min-height: 65vh;
+  min-width: 80vh;
+  left: 30%;
+  position: fixed;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+  top: 8%;
+  outline: none;
+  font-family: Impact, Haettenschweiler, 'Arial Narrow Bold', sans-serif;
+}
+  
+  .titulo-ahorcado {
+    text-align: center;
+    left: auto;
+    color: white;
+    text-shadow: 2px 2px 2px black;
+    font-weight: bold;
+    width: max-content;
+    display: block;
+    margin: 0 auto;
+    background-color: rgba(67, 37, 69, 0.7);
+    padding: 5px 15px;
+    margin-top: 3rem;
+    border-radius: 20px;
+    box-shadow: 0 0 8px gray;
+    margin-bottom: 1rem;
+    box-shadow: 0 0 20px #c8bcfb;
+    font-size: 40px;
+  }
+  
+  .palabra-adivinar {
+    text-align: center;
+    color: white;
+    text-shadow: 2px 2px 2px black;
+    font-weight: bold;
+    font-size: 2rem;
+    margin-bottom: 1rem;
+    left: auto;
+    outline: none;
+    font-family: Impact, Haettenschweiler, 'Arial Narrow Bold', sans-serif;
+  }
+  
+  .intentos {
+    left: auto;
+    text-align: center;
+    font-size: 30px;
+    color: #00d9ff;;
+    text-shadow: 2px 2px 2px black;
+    font-weight: bold;
+  }
+  
+  .btn-letra {
+    padding: 1em 2em;
+    font-size: 13px;
+    font-weight: 500;
+    color: #000;
+    background-color: #CFDEF3;
+    border: none;
+    border-radius: 15px;
+    box-shadow: 0px 8px 15px rgba(0, 0, 0, 0.1);
+    transition: all 0.3s ease 0s;
+    cursor: pointer;
+    outline: none;
+    margin-bottom: 0.5rem;
+    margin-right: 0.5rem;
+    font-family: Impact, Haettenschweiler, 'Arial Narrow Bold', sans-serif;
+  }
+
+  .btn-acierto {
+    padding: 1em 2em;
+    font-size: 12px;
+    /* letter-spacing: 2.5px; */
+    font-weight: 500;
+    color: #000;
+    background-color: #61c50f;
+    border: none;
+    border-radius: 15px;
+    box-shadow: 0px 8px 15px rgba(0, 0, 0, 0.1);
+    transition: all 0.3s ease 0s;
+    cursor: pointer;
+    outline: none;
+    margin-bottom: 0.5rem;
+    margin-right: 0.5rem;
+    font-family: Impact, Haettenschweiler, 'Arial Narrow Bold', sans-serif;
+  }
+
+  .btn-error {
+    padding: 1em 2em;
+    font-size: 12px;
+    /* letter-spacing: 2.5px; */
+    font-weight: 500;
+    color: #000;
+    background-color: #c5240f;
+    border: none;
+    border-radius: 15px;
+    box-shadow: 0px 8px 15px rgba(0, 0, 0, 0.1);
+    transition: all 0.3s ease 0s;
+    cursor: pointer;
+    outline: none;
+    margin-bottom: 0.5rem;
+    margin-right: 0.5rem;
+    font-family: Impact, Haettenschweiler, 'Arial Narrow Bold', sans-serif;
+  }
+  
+  .btn-letra:hover {
+    background-color: #7a3bb4;
+    box-shadow: 0px 15px 20px rgba(196, 2, 255, 0.8);
+    color: #fff;
+    transform: translateY(-7px);
+  }
+  
+  .btn-letra:active {
+    transform: translateY(-1px);
+  }
+  
+  .btn-reiniciar {
+    padding: 1.3em 3em;
+    font-size: 14px;
+    padding: auto;
+    text-transform: uppercase;
+    letter-spacing: 2.5px;
+    font-weight: 500;
+    color: rgb(255, 255, 255);
+    background-color: rgb(146, 19, 158);
+    border: none;
+    border-radius: 45px;
+    box-shadow: 0px 8px 15px rgba(0, 0, 0, 0.1);
+    transition: all 0.3s ease 0s;
+    cursor: pointer;
+    outline: none;
+    display: block;
+    margin: 0 auto 0.5rem auto;
+    margin: 10px;
+    font-family: Impact, Haettenschweiler, 'Arial Narrow Bold', sans-serif;
+  }
+  
+  .btn-reiniciar:hover {
+    background-color: #161718;
+    box-shadow: 0px 15px 20px rgba(138, 171, 201, 0.4);
+    color: #fff;
+    transform: translateY(-7px);
+  }
+  
+  .btn-reiniciar:active {
+    transform: translateY(-1px);
+  }
+  
+  @media screen and (max-width: 480px) {
+    .contenedor-botones {
+      padding-top: 1rem;
+    }
+  
+    .btn-letra {
+      padding: 0.7em 1.5em;
+      font-size: 9px;
+      font-weight: bolder;
+    }
+  }
+
+  .palabra{
+    left: auto;
+    position: relative;
+  }
+
+  .text-center{
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
+    margin: 10px;
+  }
+
+  .container-letras{
+    position: fixed;
+    bottom: 15%;
+    left: 5%;
+  }
+
+  .divBtn{
+    position: fixed;
+    display: flex;
+    bottom: 1%;
+    left: 40%;
+  }
+
+  .parteBaja{
+    position: fixed;
+  }
+
+  .divAhorcado{
+    text-align: center;
+    color: white;
+    text-shadow: 2px 2px 2px black;
+    font-weight: bold;
+    font-size: 2rem;
+    margin-bottom: 1rem;
+    outline: none;
+    position: relative;
+    top: 0%;
+  }
+
+  .error-toast {
+    position: fixed;
+    bottom: 20px;
+    right: 20px;
+    background-color: #802cbc;
+    color: #fff;
+    border-radius: 5px;
+    padding: 10px;
+    display: flex;
+    align-items: center;
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.2);
+    font-family: Impact, Haettenschweiler, 'Arial Narrow Bold', sans-serif;
+  }
+  
+  .error-toast-icon {
+    font-size: 24px;
+    margin-right: 10px;
+  }
+  
+  .error-toast-message {
+    font-size: 20px;
+  }

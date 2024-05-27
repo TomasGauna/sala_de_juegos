@@ -1,0 +1,39 @@
+<div class="contenedor">
+    <nav class="nav">
+        <div class="navbar-content">
+            <img id="logo" src="../../../assets/videojuego.png" routerLink="/home">
+            <div class="lbls">
+                <label class="lblNav" routerLink="">Home</label>
+                <label class="lblNav" routerLink="/juegos">Juegos</label>
+            </div>
+            <div class="btn" *ngIf="!logueado">
+                <button routerLink="/login">LOGIN</button>
+                <button routerLink="/registro">REGISTRO</button>
+            </div>
+            <div class="btn" *ngIf="logueado">
+                <button>{{(email.split("@")[0]).toUpperCase()}}</button>
+                <button (click)="cerrarSesion()">LOGOUT</button>
+            </div>
+        </div>
+    </nav>
+</div>
+
+<div class="contendedor-juegos" *ngIf="mostrarComponentes">
+    <div class="juegos">
+        <img src="assets/ahorcado.png" class="image" routerLink="ahorcado" >
+        <img src="assets/numero.png" class="image" routerLink="mayor-menor">
+    </div>
+    <div class="juegos">
+        <img src="assets/preguntados.jpg" class="image" routerLink="preguntados">
+        <img src="assets/mina.png" class="image" routerLink="buscaminas">
+    </div>
+</div>
+
+<div class="divChat" (click)="abrirChat()">
+    <img id="chat" src="assets/chat-en-vivo.png">
+</div>
+
+<div>
+  <app-chat [isChatOpen]="isChatOpen" [email]="email"></app-chat>
+</div>
+<router-outlet></router-outlet>

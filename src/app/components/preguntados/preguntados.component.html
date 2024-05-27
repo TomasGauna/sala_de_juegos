@@ -1,0 +1,28 @@
+<div class="contenedor">
+    <div class="divLetras">
+        <h1 class="titulo">PREGUNTADOS</h1>
+        <p class="puntuacion">
+            Puntuación: {{ score }}  
+            <span class="intentos">(Intentos: {{ intentos }}/10)</span>
+        </p>
+    </div>
+    <div class="pregunta" *ngIf="activo">
+        <label style="text-shadow: 0px 15px 20px rgba(255, 255, 255, 0.4);;">¿Cuál es el pokémon que se llama {{pokemonCorrecto.name.toUpperCase()}}?</label>
+    </div>
+    <div class="imagenes">
+        <div *ngFor="let p of pokemonesEnJuego" class="row">
+            <img class="image col" [src]="p.foto" (click)="elegirPokemon(p)">
+        </div>  
+    </div>
+    <div class="divBtn" *ngIf="!activo">
+        <button class="btn-comenzar-reiniciar" (click)="comenzarJuego()">COMENZAR PARTIDA</button>
+    </div>
+    <div *ngIf="intentos === 0" class="divBtn">
+        <button class="btn-comenzar-reiniciar" (click)="reiniciar()">REINICIAR JUEGO</button>
+        <button class="btn-comenzar-reiniciar" routerLink="/juegos">VOLVER</button>
+    </div>
+    <div class="error-toast" *ngIf="toast">
+        <div class="error-toast-icon">!</div>
+        <div class="error-toast-message">{{ mensaje }}</div>
+    </div>   
+</div>

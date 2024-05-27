@@ -1,0 +1,40 @@
+<div class="contenedor">
+    <div class="gral">
+        <div class="listados row">
+            <div class="otro col">
+                <h1 class="titulo" style="top: 2%;">AHORCADO</h1>
+                <div class="texto">
+                    <label *ngFor="let obj of listadoAhorcado">
+                        {{obj.usuario}} - Puntaje: {{obj.puntaje}} - Victoria: {{obj.victoria ? 'si' : 'no'}} - {{obj.fecha}}
+                    </label>
+                </div>
+            </div>
+            <div class="otro col">
+                <h1 class="titulo" style="bottom: 39.5%;">MAYOR-MENOR</h1>
+                <div class="texto">
+                    <label *ngFor="let obj of listadoMayorMenor">
+                        {{obj.usuario}} - Puntaje: {{obj.puntaje}} - Victoria: {{obj.victoria ? 'si' : 'no'}} - {{obj.fecha}}
+                    </label>
+                </div>
+            </div>
+        </div>
+        <div class="listados row">
+            <div class="otro col">
+                <h1 class="titulo" style="top: 2%;">PREGUNTADOS</h1>
+                <div class="texto">
+                    <label *ngFor="let obj of listadoPreguntados">
+                        {{obj.usuario}} - Puntaje: {{obj.puntaje}} - Victoria: {{obj.victoria ? 'si' : 'no'}} - {{obj.fecha}}
+                    </label>
+                </div>
+            </div>
+            <div class="otro col">
+                <h1 class="titulo" style="bottom: 39.5%;">BUSCAMINAS</h1>
+                <div class="texto">
+                    <label *ngFor="let obj of listadoBuscaminas">
+                        {{obj.usuario}} - Puntaje: {{obj.puntaje}} - Victoria: {{obj.victoria ? 'si' : 'no'}} - {{obj.fecha}}
+                    </label>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>

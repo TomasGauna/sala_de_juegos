@@ -1,0 +1,36 @@
+<div class="container-gral">
+    <form class="singin" [formGroup]="form" (ngSubmit)="ingresar()">
+        <img src="../../../assets/videojuego.png" class="image" routerLink="/home">
+        
+        <span id="sInicio">Inciar Sesión</span>
+
+        <div class="container-input">
+            <div class="input-container">
+                <input class="Linput" type="email" formControlName="email" placeholder="Ingrese su correo" [(ngModel)]="correo" required>
+            </div>
+            <div class="input-container">
+                <input class="Linput" type="password" placeholder="Ingrese su contraseña" formControlName="password" [(ngModel)]="password" required>
+            </div>
+
+            <button type="submit" id="btn">Ingresar</button>
+        </div>
+        
+        <div class="pregunta">
+            <a>¿No tenes cuenta todavía?  </a>
+            <a href="/registro" id="registro">   Registrate</a>
+        </div>
+
+        <div class="botones-container">
+            <button class="boton" (click)="cambiarSeleccion('admin')"></button>
+            <button class="boton" (click)="cambiarSeleccion('invitado')"></button>
+            <button class="boton" (click)="cambiarSeleccion('usuario')"></button>
+            <button class="boton" (click)="cambiarSeleccion('anonimo')"></button>
+            <button class="boton" (click)="cambiarSeleccion('tester')"></button>
+        </div>
+    </form>
+    
+    <div class="error-toast" *ngIf="!formValido">
+        <div class="error-toast-icon">!</div>
+        <div class="error-toast-message">{{ mensajeError }}</div>
+    </div>
+</div>

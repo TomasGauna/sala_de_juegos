@@ -1,0 +1,36 @@
+<div class="contenedor row">
+    <!-- <h1>BUSCAMINAS</h1>
+    <h1>RESTANTES: {{restantes}}</h1> -->
+    <div class="col unDiv">
+        <h1 class="titulo">BUSCAMINAS</h1>
+        <p class="puntuacion">
+            Puntuación: {{ score }}  
+            <span class="intentos">(RESTANTES: {{ restantes }})</span>
+        </p>
+    </div>
+    <div class="otroDiv col">
+        <div class="minesweeper" *ngIf="activo">
+            <div class="row" *ngFor="let r of board; let rowIndex = index">
+              <div class="cell" *ngFor="let c of r; let colIndex = index" (click)="revealCell(rowIndex, colIndex)">
+                <button
+                  [ngClass]="{ 'revealed': c.revealed, 'mine': c.hasMine }"
+                  [disabled]="gameover"
+                >
+                  {{ c.revealed ? (c.hasMine ? '💣' : '✅') : '' }}
+                </button>
+              </div>
+            </div>
+          </div>
+    </div>
+    <div class="divBtn" *ngIf="!activo">
+        <button class="btn-comenzar-reiniciar" (click)="comenzarJuego()">COMENZAR PARTIDA</button>
+    </div>
+    <div *ngIf="terminado" class="divBtn">
+        <button class="btn-comenzar-reiniciar" (click)="reiniciar()">REINICIAR JUEGO</button>
+        <button class="btn-comenzar-reiniciar" routerLink="/juegos">VOLVER</button>
+    </div>
+</div>
+<div class="error-toast" *ngIf="toast">
+  <div class="error-toast-icon">!</div>
+  <div class="error-toast-message">{{ mensaje }}</div>
+</div>   

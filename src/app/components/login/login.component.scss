@@ -1,0 +1,164 @@
+.container-gral{
+    position: fixed;
+    width: 100vw;
+    height: 100vh; 
+    background-image: url('https://i.pinimg.com/originals/13/7e/45/137e45c33cb5939abcd3ff4d8f858c63.gif');
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-attachment: fixed;
+    background-position: center;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    font-family: Impact, Haettenschweiler, 'Arial Narrow Bold', sans-serif;
+}
+
+.singin{
+    position: absolute;
+    width: 25%;
+    height: 75%;
+    margin: 0 auto;
+    padding: 20px;
+    border-radius: 10px;
+    background-color: rgba(76,61,93,0.8);
+    box-shadow: 5px 5px 10px rgba(0, 0, 0, 4);
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    font-family: Impact, Haettenschweiler, 'Arial Narrow Bold', sans-serif;
+}
+
+.input-container {
+    text-align: center;
+  }
+
+.Linput{
+    position: relative;
+    margin: 14px;
+    padding: 14px;
+    width: 21vw;
+    border-radius: 6px;
+    border: none;
+
+    /////////////
+    font-size: 16px;
+    background-color: #c8bcfb;
+    box-shadow: 0 2px 6px rgba(0, 0, 0, 1);
+    outline: none;
+    font-family: Impact, Haettenschweiler, 'Arial Narrow Bold', sans-serif;
+}
+
+.Linput::placeholder{
+    color: #000000;
+}
+
+.image{
+    position: fixed;
+    width: 8%;
+    height: auto;
+    bottom: 70%;
+    left: 46%;
+    margin: 0;
+    cursor: pointer;
+}
+
+#btn{
+    position: absolute;
+    border-radius: 6px;
+    border: none;
+    margin-top: 10%;
+    padding: 8px;
+    width: 40%;
+    font-family: Impact, Haettenschweiler, 'Arial Narrow Bold', sans-serif;
+    font-size: 20px;
+    background-color: #c8bcfb;
+    box-shadow: 0 2px 6px rgba(0, 0, 0, 1);
+    top: 90%;
+    cursor: pointer;
+}
+
+#btn:active{
+    background-color: #fff;
+    color: rgb(67, 37, 69);
+}
+
+.boton {
+    width: 3.53vw;
+    height: 6.53vh;
+    background-color: #c8bcfb;
+    border: none;
+    border-radius: 6px;
+    font-size: 16px;
+    margin: 10px;
+    display: inline-block;
+    cursor: pointer;
+    box-shadow: 0 2px 6px rgba(0, 0, 0, 1);
+}
+  
+.botones-container {
+    position: absolute;
+    text-align: center;
+    bottom: 5%;
+}  
+
+.pregunta{
+    position: fixed;
+    bottom: 13vh;
+}
+
+#registro{
+    color: #c8bcfb;
+}
+
+#registro:active{
+    color: #fff;
+}
+
+#registro:visited{
+    color: #261e4a;
+}
+
+#registro:visited:active{
+    color: #ffffff;
+}
+
+.container-input{
+    position: absolute;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    top: 38%;
+}
+
+#sInicio{
+    position: absolute;
+    top: 28%;
+    font-size: 37px;
+    color: #8984b1;
+    text-shadow: 2px 2px 5px rgba(0, 0, 0, 1);
+}
+
+.error-toast {
+    position: fixed;
+    bottom: 20px;
+    right: 20px;
+    background-color: #f1815f;
+    color: #fff;
+    border-radius: 5px;
+    padding: 10px;
+    display: flex;
+    align-items: center;
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.2);
+  }
+  
+  .error-toast-icon {
+    font-size: 24px;
+    margin-right: 10px;
+  }
+  
+  .error-toast-message {
+    font-size: 16px;
+  }

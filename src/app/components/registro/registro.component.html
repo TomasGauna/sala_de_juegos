@@ -1,0 +1,31 @@
+<div class="container-gral">
+    <form class="singin" [formGroup]="form" (ngSubmit)="ingresar()">
+        <img src="../../../assets/videojuego.png" class="image" routerLink="/home">
+        
+        <span id="sInicio">Registro</span>
+
+        <div class="container-input">
+            <div class="input-container">
+                <input class="Linput" type="email" formControlName="email" placeholder="Ingrese su correo" [(ngModel)]="correo" required>
+            </div>
+            <div class="input-container">
+                <input class="Linput" type="password" placeholder="Ingrese su contraseña" formControlName="password" [(ngModel)]="password" required>
+            </div>
+            <div class="input-container">
+                <input class="Linput" type="password" placeholder="Reingrese su contraseña" formControlName="Rpassword" [(ngModel)]="Rpassword" required>
+            </div>
+
+            <button type="submit" id="btn">Registrarse</button>
+        </div>
+        
+        <div class="pregunta">
+            <a>¿Ya tenés cuenta?  </a>
+            <a href="/login" id="registro">   Inicia sesión</a>
+        </div>
+    </form>
+    
+    <div class="error-toast" *ngIf="!formValido">
+        <div class="error-toast-icon">!</div>
+        <div class="error-toast-message">{{ mensajeError }}</div>
+    </div>
+</div>

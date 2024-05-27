@@ -1,0 +1,25 @@
+<div [class.chat-window]="true" [class.active]="isChatOpen" 
+      [style.left.px]="chatPosition.x" [style.top.px]="chatPosition.y" 
+      (mousedown)="startDragging($event)" (document:mouseup)="stopDragging()" 
+      (document:mousemove)="drag($event)"
+      (selectstart)="isSelectingText = true"
+      (selectend)="isSelectingText = false"
+      [style.pointer-events]="isChatOpen ? 'auto' : 'none'">
+    <div class="chat-header">
+        Chat
+        <button class="close-button" (click)="abrirChat()">x</button>
+    </div>
+    <div style="overflow-y: auto;">
+        <div class="chat-body" *ngFor="let obj of mensajesCargados">
+            <div [ngClass]="{'message-own': esUsuarioLogueado(obj.usuario), 'message-other': !esUsuarioLogueado(obj.usuario) }">
+                <span class="span">{{ obj.usuario != email ? obj.usuario.split("@")[0] : "" }}</span>
+                <span>{{ obj.mensaje }}</span>
+                <span class="sfecha"> {{ obj.fecha }}</span>
+            </div>
+        </div>
+    </div>
+    <div >
+        <input id="input" type="text" placeholder="Escribe un mensaje" [(ngModel)]="mensaje" (keydown.enter)="enviar()">
+        <button id="btn" (click)="enviar()">Enviar</button>
+    </div>
+</div>

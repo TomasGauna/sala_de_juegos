@@ -1,0 +1,148 @@
+.contenedor{
+    position: fixed;
+    width: 80%;
+    height: 50vh;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    bottom: 30%;
+    left: 10%;
+    font-family: Impact, Haettenschweiler, 'Arial Narrow Bold', sans-serif;
+}
+
+.imagenes{
+    position: fixed;
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: center;
+    bottom: 20%;
+}
+
+.image{
+    width: 180px;
+    background: rgba(4, 77, 167, 0.8);
+    border-radius: 10px;
+    margin: 25px;
+    cursor: pointer;
+    box-shadow: 0 2px 6px rgba(0, 0, 0, 3);
+}
+
+.titulo {
+    top: 0%;
+    position: fixed;
+    text-align: center;
+    color: white;
+    text-shadow: 2px 2px 2px black;
+    font-weight: bold;
+    width: max-content;
+    display: block;
+    margin: 0 auto;
+    background-color: rgba(67, 37, 69, 0.7);
+    padding: 5px 15px;
+    margin-top: 10rem;
+    border-radius: 20px;
+    box-shadow: 0 0 8px gray;
+    margin-bottom: 1rem;
+    box-shadow: 0 0 20px #c8bcfb;
+  }
+
+  .puntuacion {
+    position: absolute;
+    top: 29%;
+    text-align: center;
+    color: #00d9ff;
+    font-size: 1.5rem;
+    text-shadow: 2px 2px 2px black;
+    font-weight: bold;
+  }
+  
+  .intentos {
+    color: #00d9ff;
+    margin-left: 8rem;
+    text-shadow: 2px 2px 2px black;
+    font-weight: bold;
+    font-size: 1.5rem;
+  }
+
+  .divLetras{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+  }
+
+  .divBtn{
+    position: fixed;
+    bottom: 10%;
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+  }
+
+  .btn-comenzar-reiniciar {
+    padding: 1.3em 3em;
+    font-size: 12px;
+    text-transform: uppercase;
+    letter-spacing: 2.5px;
+    font-weight: 500;
+    color: rgb(0, 0, 0);
+    background-color: rgb(255, 255, 255);
+    border: none;
+    border-radius: 45px;
+    box-shadow: 0px 8px 15px rgba(197, 3, 250, 0.8);
+    transition: all 0.3s ease 0s;
+    cursor: pointer;
+    outline: none;
+    display: block;
+    margin: 10px;
+  }
+  
+  .btn-comenzar-reiniciar:hover {
+    background-color: #6716c4;
+    box-shadow: 0px 15px 20px rgba(245, 2, 253, 0.4);
+    color: rgb(255, 255, 255);
+    transform: translateY(-7px);
+  }
+  
+  .btn-comenzar-reiniciar {
+    transform: translateY(-1px);
+  }
+
+  .pregunta{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+    font-size: 40px;
+    font-weight: bold;
+    color: #fff;
+  }
+
+  .error-toast {
+    position: fixed;
+    bottom: 20px;
+    right: 20px;
+    background-color: #802cbc;
+    color: #fff;
+    border-radius: 5px;
+    padding: 10px;
+    display: flex;
+    align-items: center;
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.2);
+    font-family: Impact, Haettenschweiler, 'Arial Narrow Bold', sans-serif;
+  }
+  
+  .error-toast-icon {
+    font-size: 24px;
+    margin-right: 10px;
+  }
+  
+  .error-toast-message {
+    font-size: 20px;
+  }

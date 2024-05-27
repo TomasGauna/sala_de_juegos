@@ -1,0 +1,27 @@
+<div class="mayormenor-container">
+    <div class="d-flex flex-column justify-content-center">
+      <h1 class="titulo-mayormenor">MAYOR MENOR</h1>
+      <p class="puntuacion">
+        Puntuación: {{ score }}  
+        <span class="intentos">(Intentos: {{ attempts }}/10)</span>
+      </p>
+      <div class="row">
+        <div class="col">
+          <img class="carta-izquierda" [src]="cardImage" />
+        </div>
+      </div>
+      <div *ngIf="!activeGame">
+        <button class="btn-comenzar-reiniciar" (click)="startGame()">
+          {{ startButtonText }}
+        </button>
+      </div>
+    </div>
+    <div class="btn-mayormenor" *ngIf="activeGame">
+      <button class="btn-menor" (click)="playMayorMenor('menor')">Menor</button>
+      <button class="btn-mayor" (click)="playMayorMenor('mayor')">Mayor</button>
+    </div>
+</div>
+<div class="error-toast" *ngIf="toast">
+    <div class="error-toast-icon">!</div>
+    <div class="error-toast-message">{{ mensaje }}</div>
+</div>

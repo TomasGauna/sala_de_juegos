@@ -1,0 +1,158 @@
+.contenedor{
+    height: 100vh;
+    width: 90%;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    //position: fixed;
+}
+
+.container-gral{
+    height: 80vh;
+    width: 100%;
+    position: fixed;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    font-family: Impact, Haettenschweiler, 'Arial Narrow Bold', sans-serif;
+    bottom: 10%;
+}
+
+.titulo {
+    font-size: 30px;
+    text-align: center;
+    color: white;
+    text-shadow: 2px 2px 2px black;
+    font-weight: bold;
+    width: max-content;
+    display: block;
+    //margin: 0 auto;
+    background-color: rgba(67, 37, 69, 0.7);
+    padding: 5px 15px;
+    border-radius: 20px;
+    box-shadow: 0 0 8px gray;
+    box-shadow: 0 0 20px #c8bcfb;
+  }
+
+.divTitulo{
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+}
+
+#form{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    width: 100%;
+}
+
+.input{
+    margin: 10px;
+    width: 70%;
+    --background: #84A59D;
+    color: #000000;
+    border-radius: 6px;
+    margin: 5px;
+    padding: 10px;
+}
+
+.divToggle{
+    width: 100%;
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
+    color: #000000;
+    font-size: 18px;
+    font-weight: bold;
+    top: 5%;
+}
+
+.divBoton{
+    width: 50%;
+    height: 9%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    // position: fixed;
+    // bottom: 2%;
+}
+
+#btn{
+    --background: #84A59D;
+    color: #000000;
+    font-size: 30px;
+    font-weight: bold;
+    width: 50%;
+    height: 60%;
+}
+
+  span{
+    color: #eb7769;
+  }
+
+#nombre{
+    border-radius: 0px;
+}
+
+#apellido{
+    border-radius: 20px;
+}
+
+.preguntas{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    width: 100%; 
+    margin: 5px;
+    text-align: center;
+    input{
+        width: 71%;
+        margin: 15px;
+    }
+}
+
+.divCheck{
+    color: white;
+    font-size: 25px;
+    width: 71%;
+
+    input{
+        width: 30%;
+    }
+
+    label{
+        margin: 0px;
+    }
+}
+
+
+.error-toast {
+    position: fixed;
+    bottom: 20px;
+    right: 20px;
+    background-color: #802cbc;
+    color: #fff;
+    border-radius: 5px;
+    padding: 10px;
+    display: flex;
+    align-items: center;
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.2);
+    font-family: Impact, Haettenschweiler, 'Arial Narrow Bold', sans-serif;
+  }
+  
+  .error-toast-icon {
+    font-size: 24px;
+    margin-right: 10px;
+  }
+  
+  .error-toast-message {
+    font-size: 20px;
+  }
